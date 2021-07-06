@@ -15,8 +15,6 @@ $ scripts/setup_git.sh
 
 ### Oh My Steps
 
-Before running scripts need to set actual ```MY_USER``` env in ```dotfiles/.zshrc```!
-
 ```
 $ scripts/install_zsh.sh
 $ scripts/setup_ohmyzsh.sh
