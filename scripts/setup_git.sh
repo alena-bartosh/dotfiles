@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
+# stop script if any command fails
+set -e
+
+CURRENT_DIR="$(readlink -f "${BASH_SOURCE%/*}")"
+source "${CURRENT_DIR}/colors.sh"
+
 NAME="Alena Bartosh"
 EMAIL="alena.mathematics@gmail.com"
-
-export TERM=xterm-256color
-
-BOLD=$(tput bold)
-ORANGE=$(tput setaf 3)
-NC=$(tput sgr0)
 
 setup_git() {
   git config --global user.name "${NAME}"
