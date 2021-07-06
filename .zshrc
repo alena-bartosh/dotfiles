@@ -13,15 +13,6 @@ ZSH_THEME="agnoster"
 # Additional manual step: set colors with terminal setting
 # solarized theme + #AD7FA8 for pink (instead of yellow) + #775685 for violet (instead of blue)
 
-# Patch theme to have emoji in prompt
-prompt_context() {
-  if [[ -n "$SSH_CLIENT" ]]; then
-    prompt_segment black default "%(!.%{%F{yellow}%}.)%n@%m"
-  else
-    prompt_segment black default "🐙"
-  fi
-}
-
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
 HIST_STAMPS="yyyy-mm-dd"
@@ -40,15 +31,24 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+# Patch theme to have emoji in prompt
+prompt_context() {
+    if [[ -n "$SSH_CLIENT" ]]; then
+        prompt_segment black default "%(!.%{%F{yellow}%}.)%n@%m"
+    else
+        prompt_segment black default "🐙"
+    fi
+}
+
 # You may need to manually set your language environment
 export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR="nano"
- else
-   export EDITOR="subl"
- fi
+    export EDITOR="nano"
+else
+    export EDITOR="subl"
+fi
 
 # Personal aliases
 alias conf-zsh="$EDITOR ~/.zshrc"
