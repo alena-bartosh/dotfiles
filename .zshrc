@@ -1,7 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
+# Path to your oh-my-zsh installation
 export ZSH=~/.oh-my-zsh
 
 # Set name of the theme to load
@@ -9,8 +9,18 @@ ZSH_THEME="agnoster"
 
 # agnoster https://github.com/agnoster/agnoster-zsh-theme/blob/master/README.md
 
+# TODO: automate it
 # Additional manual step: set colors with terminal setting
 # solarized theme + #AD7FA8 for pink (instead of yellow) + #775685 for violet (instead of blue)
+
+# Patch theme to have emoji in prompt
+prompt_context() {
+  if [[ -n "$SSH_CLIENT" ]]; then
+    prompt_segment black default "%(!.%{%F{yellow}%}.)%n@%m"
+  else
+    prompt_segment black default "🐙"
+  fi
+}
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
