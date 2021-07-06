@@ -1,6 +1,6 @@
 # dotfiles
 
-My set of zsh, git, and tmux configuration files.
+<img src="doc/result_snapshot.png" width="650">
 
 ```
 $ git clone https://github.com/alena-bartosh/dotfiles.git
