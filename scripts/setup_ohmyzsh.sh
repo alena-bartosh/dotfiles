@@ -7,6 +7,7 @@ CURRENT_DIR="$(readlink -f "${BASH_SOURCE%/*}")"
 source "${CURRENT_DIR}/colors.sh"
 
 echo "${BOLD}${ORANGE} Install Oh My Zsh framework...${NC}"
+echo "${BOLD}${ORANGE} Important! ${NC} Enter 'exit' to go to the next step"
 sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo "${BOLD}${ORANGE} Start using personal config...${NC}"
