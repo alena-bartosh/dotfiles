@@ -25,7 +25,7 @@ echo "${BOLD}${ORANGE} Install [font=fonts-powerline] for theme...${NC}"
 sudo apt-get install fonts-powerline
 
 echo "${BOLD}${ORANGE} Load plugins...${NC}"
-git clone https://github.com/zsh-users/history-search-multi-word.git ~/.oh-my-zsh/custom/plugins/history-search-multi-word
+git clone https://github.com/zdharma/history-search-multi-word.git ~/.oh-my-zsh/custom/plugins/history-search-multi-word
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
 git clone https://github.com/zdharma/fast-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/fast-syntax-highlighting
 
