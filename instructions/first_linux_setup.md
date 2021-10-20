@@ -51,9 +51,9 @@ git config --global user.email "NEW_EMAIL"
 2) Generate ssh keys to work from console
 
 ```
-echo "REMINDER: SET PASSWORD! Enter to continue..." && read && && ssh-keygen -t ed25519 -C "NEW_EMAIL"
+echo "REMINDER: SET PASSWORD! Enter to continue..." && read && ssh-keygen -t ed25519 -C "NEW_EMAIL"
 eval "$(ssh-agent -s)"
-ssh-add ~/.ssh/id_ed25519 echo "Copy to clipboard. Enter to continue..." && read && && cat ~/.ssh/id_ed25519.pub
+ssh-add ~/.ssh/id_ed25519 echo "Copy to clipboard. Enter to continue..." && read && cat ~/.ssh/id_ed25519.pub
 echo "Add a SSH key to GitHub account. Enter to continue..." && read && xdg-open "https://github.com/settings/ssh/new"
 ```
 
